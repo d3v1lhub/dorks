@@ -121,7 +121,7 @@ switch(type)
         url += '+intitle:index.of';
         break;
     case 2:
-        url += '+ext:xml+|+ext:conf+|+ext:cnf+|+ext:reg+|+ext:inf+|+ext:rdp+|+ext:cfg+|+ext:txt+|+ext:ora+|+ext:ini';
+        url += '+ext:xml+|+ext:conf+|+ext:cnf+|+ext:reg+|+ext:inf+|+ext:rdp+|+ext:cfg+|+ext:txt+|+ext:ora+|+ext:ini+|+ext:env';
         break;
     case 3:
         url += '+ext:sql+|+ext:dbf+|+ext:mdb';
@@ -133,16 +133,16 @@ switch(type)
         url += '+ext:bkf+|+ext:bkp+|+ext:bak+|+ext:old+|+ext:backup';
         break;
     case 6:
-        url += '+inurl:login';
+        url += '+inurl:login+|+inurl:signin+|+intitle:Login+|+intitle:"sign+in"+|+inurl:auth';
         break;
     case 7:
         url += '+intext:"sql+syntax+near"+|+intext:"syntax+error+has+occurred"+|+intext:"incorrect+syntax+near"+|+intext:"unexpected+end+of+SQL+command"+|+intext:"Warning:+mysql_connect()"+|+intext:"Warning:+mysql_query()"+|+intext:"Warning:+pg_connect()"';
         break;
     case 8:
-        url += '+ext:doc+|+ext:docx+|+ext:odt+|+ext:pdf+|+ext:rtf+|+ext:sxw+|+ext:psw+|+ext:ppt+|+ext:pptx+|+ext:pps+|+ext:csv';
+        url += '+ext:doc+|+ext:docx+|+ext:odt+|+ext:pdf+|+ext:rtf+|+ext:sxw+|+ext:psw+|+ext:ppt+|+ext:pptx+|+ext:pps+|+ext:csv+|+ext:txt';
         break;
     case 9:
-        url += '+ext:php+intitle:phpinfo+"published+by+the+PHP+Group"';
+        url += '+ext:php+intitle:phpinfo+"published+by+the+PHP+Group"+|+"PHP+Parse+error"+|+"PHP+Warning"+|+"PHP+Error"';
         break;
 	case 10:
         url += '+inurl:wp-+|+inurl:wp-content+|+inurl:plugins+|+inurl:uploads+|+inurl:themes+|+inurl:download';
@@ -157,19 +157,19 @@ switch(type)
         url += '+inurl:redir+|+inurl:url+|+inurl:redirect+|+inurl:return+|+inurl:src=http+|+inurl:r=http';
         break;
 	case 14:
-        url += '+ext:action+|+ext:struts+|+ext:do';
+        url = 'site:' +'github.com+|+site:gitlab.com+"'+site+'"';
         break;
 	case 15:
         url = 'https://www.google.com/search?q=site:pastebin.com+' + site;
         break;
 	case 16:
-        url = 'https://www.google.com/search?q=site:linkedin.com+employees+' + site;
+        url += '+inurl:signup+|+inurl:register+|+intitle:Signup';
         break;
 	case 17:
         url += '+inurl:"/phpinfo.php"+|+inurl:".htaccess"+|+inurl:"/.git"+' + site + ' -github';
         break;
 	case 18:
-        url = 'https://www.google.com/search?q=site:*.' + site;
+        url += '+inurl:access_token';
         break;
 	case 19:
         url = 'https://www.google.com/search?q=site:*.*.' + site;
@@ -249,15 +249,15 @@ switch(type)
 &#128269; <a href="#" onclick="google_it(6)">Login pages</a><br/>
 &#128269; <a href="#" onclick="google_it(7)">SQL errors</a><br/>
 &#128269; <a href="#" onclick="google_it(8)">Publicly exposed documents</a><br/>
-&#128269; <a href="#" onclick="google_it(9)">phpinfo()</a><br/>
+&#128269; <a href="#" onclick="google_it(9)">phpinfo() and Errors</a><br/>
 &#128269; <a href="#" onclick="google_it(11)">Finding Backdoors</a><br/>
 &#128269; <a href="#" onclick="google_it(12)">Install / Setup files</a><br/>
 &#128269; <a href="#" onclick="google_it(13)">Open Redirects</a><br/>
-&#128269; <a href="#" onclick="google_it(14)">Apache STRUTS RCE</a><br/>
+&#128269; <a href="#" onclick="google_it(14)">Search in Github and Gitlab</a><br/>
 &#128269; <a href="#" onclick="google_it(15)">Find Pastebin entries</a><br/>
-&#128269; <a href="#" onclick="google_it(16)">Employees on LINKEDIN</a><br/>
+&#128269; <a href="#" onclick="google_it(16)">Signup pages</a><br/>
 &#128269; <a href="#" onclick="google_it(17)">.htaccess sensitive files</a><br/>
-&#128269; <a href="#" onclick="google_it(18)">Find Subdomains</a><br/>
+&#128269; <a href="#" onclick="google_it(18)">Access Token</a><br/>
 &#128269; <a href="#" onclick="google_it(19)">Find Sub-Subdomains</a><br/>
 </div></div></div>
 <div class="column"><div style="text-align: center;">
