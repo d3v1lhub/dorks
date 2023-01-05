@@ -139,7 +139,7 @@ switch(type)
         url += '+intext:"sql+syntax+near"+|+intext:"syntax+error+has+occurred"+|+intext:"incorrect+syntax+near"+|+intext:"unexpected+end+of+SQL+command"+|+intext:"Warning:+mysql_connect()"+|+intext:"Warning:+mysql_query()"+|+intext:"Warning:+pg_connect()"';
         break;
     case 8:
-        url += '+ext:doc+|+ext:docx+|+ext:odt+|+ext:pdf+|+ext:rtf+|+ext:sxw+|+ext:psw+|+ext:ppt+|+ext:pptx+|+ext:pps+|+ext:csv+|+ext:txt';
+        url += '+ext:doc+|+ext:docx+|+ext:odt+|+ext:pdf+|+ext:rtf+|+ext:sxw+|+ext:psw+|+ext:ppt+|+ext:pptx+|+ext:pps+|+ext:csv+|+ext:xls+|+ext:txt+|+ext:git+|+inurl:confidential+|+intext:confidential';
         break;
     case 9:
         url += '+ext:php+intitle:phpinfo+"published+by+the+PHP+Group"+|+"PHP+Parse+error"+|+"PHP+Warning"+|+"PHP+Error"';
@@ -166,7 +166,7 @@ switch(type)
         url += '+inurl:signup+|+inurl:register+|+intitle:Signup';
         break;
 	case 17:
-        url += '+inurl:"/phpinfo.php"+|+inurl:".htaccess"+|+inurl:"/.git"+' + site + ' -github';
+        url += '+filetype:asp+|+filetype:bak+|+filetype:conf+|+filetype:dat+|+filetype:eml+|+filetype:inc+|+filetype:log+|+filetype:mdb+|+filetype:ora+|+filetype:pass+|+filetype:pdf+|+filetype:pem+|+filetype:properties+|+filetype:pst+|+filetype:reg+|+filetype:sql+|+filetype:url+|+filetype:xls+|+filetype:xlsx+|+filetype:git';
         break;
 	case 18:
         url += '+inurl:access_token';
@@ -256,7 +256,7 @@ switch(type)
 &#128269; <a href="#" onclick="google_it(14)">Search in Github and Gitlab</a><br/>
 &#128269; <a href="#" onclick="google_it(15)">Find Pastebin entries</a><br/>
 &#128269; <a href="#" onclick="google_it(16)">Signup pages</a><br/>
-&#128269; <a href="#" onclick="google_it(17)">.htaccess sensitive files</a><br/>
+&#128269; <a href="#" onclick="google_it(17)">Sensitive files</a><br/>
 &#128269; <a href="#" onclick="google_it(18)">Access Token</a><br/>
 &#128269; <a href="#" onclick="google_it(19)">Find Sub-Subdomains</a><br/>
 </div></div></div>
